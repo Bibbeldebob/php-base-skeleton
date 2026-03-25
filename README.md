@@ -1,1 +1,1 @@
-# symfony-skeleton
+# php-skeleton
