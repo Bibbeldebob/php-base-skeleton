@@ -5,6 +5,7 @@ services:
     image: mcr.microsoft.com/devcontainers/php:3-8.5-trixie
     volumes:
       - ..:/workspace:cached
+      - ./php.ini:/usr/local/etc/php/conf.d/zz-php.ini
     depends_on:
       - db
     networks:
