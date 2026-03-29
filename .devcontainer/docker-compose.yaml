@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/php:3-8.5-trixie
+    volumes:
+      - ..:/workspace:cached
+    depends_on:
+      - db
+    networks:
+      - devnet
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - devnet
+
+volumes:
+  db-data:
+
+networks:
+  devnet:
