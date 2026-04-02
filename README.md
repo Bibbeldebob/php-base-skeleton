@@ -1,4 +1,4 @@
-# php-skeleton
+# php-base-skeleton
 
 ## Nutzung als Starterprojekt
 
