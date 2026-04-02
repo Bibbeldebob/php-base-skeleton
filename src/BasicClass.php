@@ -6,7 +6,7 @@ namespace App;
 
 final class BasicClass
 {
-    function greet(string $name): string
+    public function greet(string $name): string
     {
         return 'Hello ' . $name;
     }

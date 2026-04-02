@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(BasicClass::class)]
 final class BasicClassTest extends TestCase
 {
-    function testGreetOutputsCorrectString(): void
+    public function testGreetOutputsCorrectString(): void
     {
         $basic = new BasicClass();
 
