@@ -1,0 +1,13 @@
+{
+    "name": "bibbeldebob/php-skeleton",
+    "description": "A PHP Skeleton with devcontainer for easy and quick start of new projects",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {}
+}
