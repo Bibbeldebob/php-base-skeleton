@@ -21,17 +21,25 @@
     "require-dev": {
         "phpunit/phpunit": "^13.0",
         "phpstan/phpstan": "^2.1",
-        "rector/rector": "^2.3"
+        "rector/rector": "^2.3",
+        "friendsofphp/php-cs-fixer": "^3.94"
     },
     "scripts": {
         "unit": "vendor/bin/phpunit",
         "stan": "vendor/bin/phpstan analyse -c phpstan.neon -vv",
         "rector-dry": "vendor/bin/rector process --dry-run",
         "rector": "vendor/bin/rector",
+        "cs-fix": "vendor/bin/php-cs-fixer fix",
+        "cs-fix-dry": "vendor/bin/php-cs-fixer fix --dry-run --diff",
         "codecheck": [
-            "unit",
-            "stan",
-            "rector"
+            "@php -r \"echo PHP_EOL . '==== UNIT TESTS ====' . PHP_EOL;\"",
+            "@unit",
+            "@php -r \"echo PHP_EOL . '==== PHPSTAN ====' . PHP_EOL;\"",
+            "@stan",
+            "@php -r \"echo PHP_EOL . '==== RECTOR ====' . PHP_EOL;\"",
+            "@rector",
+            "@php -r \"echo PHP_EOL . '==== CS FIXER ====' . PHP_EOL;\"",
+            "@cs-fix"
         ]
     }
 }

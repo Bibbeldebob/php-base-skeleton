@@ -4,4 +4,4 @@ parameters:
         - src
         - tests
 
-    tmpDir: var/phpstan
+    tmpDir: var/cache/phpstan
