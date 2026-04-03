@@ -5,13 +5,13 @@
 Dieses Projekt kann als Grundlage für neue PHP-Projekte verwendet werden. Weil es nicht auf Packagist veröffentlicht ist, nutze bitte die GitHub-Repository-URL in `composer create-project`:
 
 ```bash
-composer create-project --repository-url=https://github.com/Bibbeldebob/php-base-skeleton.git <dein-neues-verzeichnis>
+composer create-project --repository='{"type":"vcs","url":"https://github.com/Bibbeldebob/php-base-skeleton.git"}' bibbeldebob/php-skeleton <dein-neues-verzeichnis> dev-main
 ```
 
 Beispiel:
 
 ```bash
-composer create-project --repository-url=https://github.com/Bibbeldebob/php-base-skeleton.git my-app
+composer create-project --repository='{"type":"vcs","url":"https://github.com/Bibbeldebob/php-base-skeleton.git"}' bibbeldebob/php-skeleton my-app dev-main
 ```
 
 Danach kannst du das Verzeichnis `my-app` betreten und wie gewohnt weiterentwickeln:
